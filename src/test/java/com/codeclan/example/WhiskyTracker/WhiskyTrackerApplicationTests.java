@@ -28,12 +28,12 @@ public class WhiskyTrackerApplicationTests {
 	public void contextLoads() {
 	}
 
-//	@Test
-//	public void findWhiskiesByYear(){
-//		List<Whisky> found = whiskyRepository.findWhiskiesByYear(2018);
-//		assertEquals(2018, found.get(0).getYear() );
-//
-//	}
+	@Test
+	public void findWhiskiesByYear(){
+		List<Whisky> found = whiskyRepository.findWhiskiesByYear(2018);
+		assertEquals(2018, found.get(0).getYear() );
+
+	}
 
 	@Test
 	public void findDistilleriesByRegion(){
@@ -42,12 +42,18 @@ public class WhiskyTrackerApplicationTests {
 
 	}
 
-//	@Test
-//	public void findWhiskiesByDistilleryByAge(){
-//		List<Whisky> found = whiskyRepository.findWhiskiesByDistilleryByAge(1L, 10);
-//		assertEquals("Speyside", found.get(0).getDistillery() );
-//
-//	}
+
+
+	@Test
+	public void DistilleriesByWhiskyByAge(){
+		List<Distillery> found = distilleryRepository.findDistilleriesThatHaveWhiskiesAged(15);
+		assertEquals("Highland", found.get(0).getRegion() );
+
+	}
+
+
+
+
 
 
 }

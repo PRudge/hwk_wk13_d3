@@ -11,7 +11,7 @@ import java.util.List;
 @RepositoryRestResource(excerptProjection = EmbedDistillery.class)
 public interface WhiskyRepository extends JpaRepository<Whisky, Long>, WhiskyRepositoryCustom {
 
-   List<Whisky> findWhiskiesByYear(int year);
+    List<Whisky> findWhiskiesByYear(int year);
 //    List<Whisky> findWhiskiesByDistilleryByAge(Long distilleryId, int age);
 
 
